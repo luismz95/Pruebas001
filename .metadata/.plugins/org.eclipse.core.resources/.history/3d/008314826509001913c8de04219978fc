@@ -33,7 +33,7 @@ public class Login {
 	Font font1 = new Font("SansSerif", Font.BOLD, 20);
 	
 	//imagenes
-	ImageIcon img1 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Cine\\Cine\\src\\login.png");
+	ImageIcon img1 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Proyecto Cine\\Cine\\src\\login.png");
 	JLabel backg;
 	
 	Sistema sistema_ventana = new Sistema();

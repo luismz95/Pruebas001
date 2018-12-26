@@ -37,17 +37,17 @@ public class Sistema {
 	ImageIcon img1 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Cine\\Cine\\src\\shop.png");
 	JButton lb_ventas;
 	ImageIcon img2 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Cine\\Cine\\src\\funciones.png");
-	JButton lb_funciones;
+	JLabel lb_funciones;
 	ImageIcon img3 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Cine\\Cine\\src\\peliculas.png");
-	JButton lb_peliculas;
+	JLabel lb_peliculas;
 	ImageIcon img4 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Cine\\Cine\\src\\salas.png");
-	JButton lb_salas;
+	JLabel lb_salas;
 	ImageIcon img5 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Cine\\Cine\\src\\user.png");
-	JButton lb_user;
+	JLabel lb_user;
 	ImageIcon img6 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Cine\\Cine\\src\\ajustes.png");
-	JButton lb_ajustes;
+	JLabel lb_ajustes;
 	ImageIcon img7 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Cine\\Cine\\src\\lout.png");
-	JButton lb_lout;
+	JLabel lb_lout;
 	
 	
 	// Metodo para crear la ventana principal
@@ -73,24 +73,25 @@ public class Sistema {
 		
 		
 		lb_ventas = new JButton("", img1);
+				//JLabel("",img1,JLabel.CENTER);
 		lb_ventas.setBounds(360, 12, 64, 64);
 		lb_tventas.setBounds(372, 61, 100, 50);
-		lb_funciones = new JButton("", img2);
+		lb_funciones = new JLabel("",img2,JLabel.CENTER);
 		lb_funciones.setBounds(460, 12, 64, 64);
 		lb_tfunciones.setBounds(462, 61, 100, 50);
-		lb_peliculas = new JButton("",img3);
+		lb_peliculas = new JLabel("",img3,JLabel.CENTER);
 		lb_peliculas.setBounds(560, 12, 64, 64);
 		lb_tpeliculas.setBounds(568, 61, 100, 50);
-		lb_salas = new JButton("",img4);
+		lb_salas = new JLabel("",img4,JLabel.CENTER);
 		lb_salas.setBounds(660, 12, 64, 64);
 		lb_tsalas.setBounds(672, 61, 100, 50);
-		lb_user = new JButton("",img5);
+		lb_user = new JLabel("",img5,JLabel.CENTER);
 		lb_user.setBounds(760, 12, 64, 64);
 		lb_tuser.setBounds(769, 61, 100, 50);
-		lb_ajustes = new JButton("",img6);
+		lb_ajustes = new JLabel("",img6,JLabel.CENTER);
 		lb_ajustes.setBounds(860, 12, 64, 64);
 		lb_tajustes.setBounds(870, 61, 100, 50);
-		lb_lout = new JButton("",img7);
+		lb_lout = new JLabel("",img7,JLabel.CENTER);
 		lb_lout.setBounds(975, 12, 64, 64);
 		lb_tlout.setBounds(992, 61, 100, 50);
 		
