@@ -1,0 +1,41 @@
+package proyectol.cine.v1;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Sistema {
+
+	JFrame fr_sistema = new JFrame("Sistema Cine");
+	JPanel pn_principal = new JPanel();
+	JPanel pn_navegador = new JPanel();
+	JPanel pn_procesos = new JPanel();
+	
+	//Colores
+	Color bgcolor = Color.decode("#c23616");
+	Color frcolor = Color.decode("#2980b9");
+	Color btncolor = Color.decode("#273c75");
+	
+	//Fuente
+	Font font1 = new Font("SansSerif", Font.BOLD, 20);
+	
+	// Metodo para crear la ventana principal
+	public void crear_sistema () {
+		fr_sistema.setSize(1000, 700);
+		fr_sistema.setVisible(true);
+		fr_sistema.setResizable(false);
+		
+		fr_sistema.add(pn_principal);
+		
+		pn_principal.setBackground(bgcolor);
+		pn_navegador.setBackground(Color.BLACK);
+		
+		pn_principal.add(pn_navegador);
+		pn_principal.setLayout(null);
+		pn_navegador.setBounds(0, 0, 1000, 200);
+		
+	}
+
+}

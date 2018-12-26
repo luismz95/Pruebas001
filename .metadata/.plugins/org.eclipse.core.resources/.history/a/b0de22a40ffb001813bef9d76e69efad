@@ -1,0 +1,117 @@
+package proyectol.cine.v1;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class Login {
+
+	//inicializacion de los componentes a usar en la ventana Login
+	JFrame fr_login = new JFrame("Iniciar Sesion");
+	JPanel pn_login = new JPanel();
+	JLabel lb_user = new JLabel("Usuario");
+	JTextField txt_user = new JTextField();
+	JLabel lb_pass = new JLabel("Usuario");
+	JPasswordField txt_pass = new JPasswordField();
+	JButton btn_iniciar = new JButton("Iniciar");
+	
+	//Colores
+	Color bgcolor = Color.decode("#c23616");
+	Color frcolor = Color.decode("#2980b9");
+	Color btncolor = Color.decode("#273c75");
+	
+	//Fuente
+	Font font1 = new Font("SansSerif", Font.BOLD, 20);
+	
+	//Background
+	ImageIcon img1 = new ImageIcon("C:\\Users\\LuisA\\Desktop\\Proyecto Cine\\Cine\\src\\login.png");
+	JLabel backg;
+	
+	Sistema sistema_ventana = new Sistema();
+	
+	public static void main(String[] args) {
+		Login log = new Login();
+		log.crear_login(); //Se llama al metodo crear que genera la ventana
+		log.acciones();
+	}
+	
+	// Metodo para crear la ventana principal
+	public void crear_login () {
+		//Asignacion de propiedades a los componentes
+		//Tamaño, visibilidad ect...
+		fr_login.setSize(550, 500);
+		fr_login.setVisible(true);
+		fr_login.setResizable(false);
+		
+		//Al frame principal agrego el panel principal
+		fr_login.add(pn_login);
+		pn_login.setLayout(null); 
+		pn_login.setBackground(bgcolor);
+		
+		backg = new JLabel("",img1,JLabel.CENTER);
+		backg.setBounds(220, 50, 100, 100);
+		pn_login.add(backg);
+		
+		//Al panel principal agrego los componentes a visualizar
+		pn_login.add(lb_user);
+		pn_login.add(txt_user);
+		pn_login.add(lb_pass);
+		pn_login.add(txt_pass);
+		pn_login.add(btn_iniciar);
+		
+		//Agregamos tamano a los componentes
+		lb_user.setSize(100, 50);
+		txt_user.setSize(200, 30);
+		lb_pass.setSize(100, 50);
+		txt_pass.setSize(200, 30);
+		btn_iniciar.setSize(200, 50);
+		
+		//Asignamos localizacion de los componentes
+		lb_user.setLocation(167, 105);
+		txt_user.setLocation(167, 147);
+		lb_pass.setLocation(167, 155);
+		txt_pass.setLocation(167, 197);
+		btn_iniciar.setLocation(167, 260);
+		
+		//modifcamos estilos de labels y boton
+		lb_user.setForeground(frcolor);
+		lb_pass.setForeground(frcolor);
+		lb_user.setFont(font1);
+		lb_pass.setFont(font1);
+		txt_pass.setFont(font1);
+		txt_user.setFont(font1);
+		txt_user.setForeground(Color.WHITE);
+		txt_pass.setForeground(Color.WHITE);
+		txt_user.setBackground(null);
+		txt_pass.setBackground(null);
+		
+		btn_iniciar.setBackground(btncolor);
+		btn_iniciar.setFont(font1);
+		btn_iniciar.setForeground(Color.WHITE);
+		btn_iniciar.setBorder(null);
+		
+		
+		
+	}
+	
+	public void acciones() {
+		
+		btn_iniciar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				fr_login.setVisible(false);
+				sistema_ventana.crear_sistema();
+			}
+		});
+	}
+}

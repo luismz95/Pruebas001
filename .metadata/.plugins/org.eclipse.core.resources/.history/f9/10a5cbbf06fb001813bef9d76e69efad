@@ -1,0 +1,16 @@
+package proyectol.cine.v1;
+
+import javax.swing.JFrame;
+
+public class Sistema {
+
+	JFrame fr_sistema = new JFrame("Sistema Cine");
+	
+	
+	// Metodo para crear la ventana principal
+	public void crear_sistema () {
+		fr_sistema.setSize(900, 700);
+		fr_sistema.setVisible(true);
+	}
+
+}
