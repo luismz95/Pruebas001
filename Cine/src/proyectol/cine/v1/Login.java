@@ -27,7 +27,7 @@ public class Login {
 	//Colores
 	Color bgcolor = Color.decode("#c23616");
 	Color frcolor = Color.decode("#2980b9");
-	Color btncolor = Color.decode("#273c75");
+	Color btncolor = Color.decode("#000000");
 	
 	//Fuente
 	Font font1 = new Font("SansSerif", Font.BOLD, 20);
